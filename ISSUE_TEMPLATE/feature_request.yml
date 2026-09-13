@@ -1,0 +1,34 @@
+name: Feature request
+description: Something the engine should do that it does not — with a use case
+title: "[feature] "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature ideas that come with a (sanitised) sample document pair are
+        prioritised — layout and alignment features are starved for samples.
+  - type: textarea
+    id: problem
+    attributes:
+      label: The problem
+      description: What cannot be done today, and for whom (operator / ERP integration / developer).
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behaviour
+      description: What "done" looks like — CLI flag, new /api endpoint, rule keyword, report field…
+    validations:
+      required: true
+  - type: textarea
+    id: pairs
+    attributes:
+      label: Sample documents (optional but welcome)
+      description: A sanitised pair (or three-way set) that the feature would process.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Workarounds used today
+      description: How is this handled without the feature (manual Excel, another tool)?

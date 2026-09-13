@@ -15,8 +15,14 @@ It is read-only by design. It never writes to your data and never touches your b
 | Repository | What it is | License |
 |---|---|---|
 | [core](https://github.com/ReconCheck/core) | The engine — parsing, alignment, differential rules, evidence chain | Apache 2.0 |
-| [docs](https://github.com/ReconCheck/docs) | Documentation | — |
+| [docs](https://github.com/ReconCheck/docs) | Documentation — 用户指南 / 能力清单 / 规则 / 部署 / 接入 (中英双语) | — |
 | [rules](https://github.com/ReconCheck/rules) | Industry-specific differential rule packs | Private |
+
+### Getting involved
+
+- **Report a bug / request a feature** → [open an issue](https://github.com/ReconCheck/core/issues) (templates in `.github`).
+- **Contribution policy** → [CONTRIBUTING.md](https://github.com/ReconCheck/.github/blob/main/CONTRIBUTING.md).
+- **How it works, what it can do** → [docs](https://github.com/ReconCheck/docs).
 
 ---
 

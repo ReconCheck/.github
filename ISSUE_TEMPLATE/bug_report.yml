@@ -1,0 +1,63 @@
+name: Bug report
+description: Something is not working — fill this in so it can be reproduced
+title: "[bug] "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please sanitise every document before attaching (no real invoices /
+        PII). A reproducible pair is worth 10 descriptions.
+  - type: input
+    id: version
+    attributes:
+      label: Engine version / commit
+      description: `reconcheck --version`, or the git SHA you ran.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where does it break?
+      options:
+        - CLI (reconcheck compare / compare3)
+        - Web API (/api/*)
+        - Frontend (web UI)
+        - PDF / XLSX / encoding parsing
+        - Rules engine
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to reproduce
+      description: The exact commands / API calls you ran, and a description of the two (or three) documents involved.
+      placeholder: |
+        1. `reconcheck compare a.csv b.csv --rules ...`
+        2. observed output…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected vs actual
+      description: What should have happened; what happened instead (paste error lines).
+    validations:
+      required: true
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Attach sanitised pair (optional)
+      description: Drop sanitised CSV/TSV/XLSX/PDF files here. Keep them minimal.
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - blocker (wrong verdict on valid data)
+        - high (crash / 500)
+        - medium (wrong error / edge case)
+        - low (cosmetic / UX)
+    validations:
+      required: true
